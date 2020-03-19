@@ -1,10 +1,12 @@
 import re
 import sys
 import requests
-import tldextract
 import subprocess
 from termcolor import colored
 from multiprocessing import Pool
+from urllib3.exceptions import InsecureRequestWarning
+
+requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 
 
 #default values
@@ -97,12 +99,10 @@ def subbrute(domain):
 def is_yoinkable(domain):
 	try:
 		#check if is http or https
-		r = requests.head("http://" + domain, timeout=5, verify=False)
+		r = requests.get("http://" + domain, timeout=5, verify=False)
 
 		if r.url.split("://")[0] == "https://":
 			r = requests.get("https://" + domain)
-		else:
-			r = requests.get("http://" + domain)
 
 		#check if takeover fingerprint exists in page
 		for engine in takeover_data:
