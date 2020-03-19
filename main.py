@@ -115,7 +115,8 @@ def is_yoinkable(domain):
 					whitespace += " "
 
 				print(colored(domain, 'cyan'), colored("%s%s",'white') % (whitespace, engine))
-
+				
+				os.makedirs(os.path.dirname("./zoinks/"), exist_ok=True)
 				with open("./zoinks/" + domain, "w+") as file:
 					file.write(engine)
 
