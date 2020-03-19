@@ -1,14 +1,7 @@
 # Rupert
 Wrapper for Subfinder, Subbrute, and bad code to detect subdomain takeovers.
 
-https://github.com/projectdiscovery/subfinder
-
-https://github.com/TheRook/subbrute
-
-https://github.com/EdOverflow/can-i-take-over-xyz
-
-https://github.com/danielmiessler/SecLists
-
+![Rupert Screenshot](https://i.imgur.com/HZDdY3H.png)
 
 ### How to Use
 `python rupert.py [domain] [flags]`
@@ -20,3 +13,13 @@ https://github.com/danielmiessler/SecLists
 
 
 `-i [file]` - read domains from file
+
+
+### Credit
+https://github.com/projectdiscovery/subfinder
+
+https://github.com/TheRook/subbrute
+
+https://github.com/EdOverflow/can-i-take-over-xyz
+
+https://github.com/danielmiessler/SecLists
