@@ -7,6 +7,8 @@ https://github.com/TheRook/subbrute
 
 https://github.com/EdOverflow/can-i-take-over-xyz
 
+https://github.com/danielmiessler/SecLists
+
 
 ### How to Use
 `python rupert.py [domain] [flags]`
